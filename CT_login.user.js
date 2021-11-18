@@ -4,7 +4,7 @@
 // @description turn on automcomplete for email and password
 // @include     https://centraltickets.co.uk/
 // @include     *centraltickets.co.uk/*
-// @version     1.2021.11.18.0929
+// @version     1.2021.11.18.0954
 // @grant       none
 // @run-at 	document-end
 // @copyright   2015, cameroncondry
@@ -18,13 +18,15 @@ function CT_login(){
 
 function InsertLogin(){
   input = document.getElementsByTagName("input");
-  if(input.getElementById("email_addr")[0]){
-    var email = document.getElementsByClassName("login-popup button_tooltip tooltip-block")[0];
+  if(document.getElementById("email_addr")[0]){
+    var email = document.getElementById("email_addr")[0];
     //console.log(email);
     //https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/password
     email.setAttribute("automComplete","on");
   }
   for(i=0;i<=input.length;i++){
+    //console.log(i);
+    //console.log(input[i]);
     if(input[i].type == "password"){
       input[i].setAttribute("automComplete","on");
       break;
