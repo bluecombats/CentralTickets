@@ -4,13 +4,13 @@
 // @description turn on automcomplete for email and password
 // @include     https://centraltickets.co.uk/
 // @include     *centraltickets.co.uk/*
-// @version     1.2021.11.18.1005
+// @version     1.2021.11.18.1010
 // @grant       none
 // @run-at 	document-end
 // @copyright   2015, cameroncondry
 // ==/UserScript==
 
-function CT_login(){
+function initCT_login(){
 	var CT_loginInterval = setInterval(function(){
 		InsertLogin();
 	}, 1000);
