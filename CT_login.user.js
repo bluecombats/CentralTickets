@@ -4,7 +4,7 @@
 // @description turn on automcomplete for email and password
 // @include     https://centraltickets.co.uk/
 // @include     *centraltickets.co.uk/*
-// @version     1.2021.11.18.0954
+// @version     1.2021.11.18.1005
 // @grant       none
 // @run-at 	document-end
 // @copyright   2015, cameroncondry
@@ -17,21 +17,22 @@ function CT_login(){
 }
 
 function InsertLogin(){
-  input = document.getElementsByTagName("input");
-  if(document.getElementById("email_addr")[0]){
-    var email = document.getElementById("email_addr")[0];
-    //console.log(email);
-    //https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/password
-    email.setAttribute("automComplete","on");
-  }
-  for(i=0;i<=input.length;i++){
-    //console.log(i);
-    //console.log(input[i]);
-    if(input[i].type == "password"){
-      input[i].setAttribute("automComplete","on");
-      break;
-    }
-  }
+	if(document.getElementsByTagName("input")){
+		input = document.getElementsByTagName("input");
+    		for(i=0;i<=input.length;i++){
+       			//https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/password
+       			console.log(i);
+       			console.log(input[i]);
+       			if(input[i].type == "password"){
+         			console.log("password");
+         			input[i].setAttribute("automComplete","on");
+       			}
+       			if(input[i].id == "email_addr"){
+         			console.log("email");
+         			input[i].setAttribute("automComplete","on");
+       			}
+    		}
+  	}
 }
 //Main script starts here
 initCT_login();
