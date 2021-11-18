@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name        CT_login
-// @namespace   https://github.com/bluecombats/CentralTickets/CT_login.user.js
+// @namespace   https://github.com/bluecombats/CentralTickets/raw/main/CT_login.user.js
 // @description turn on automcomplete for email and password
 // @include     https://centraltickets.co.uk/
 // @include     *centraltickets.co.uk/*
-// @version     1.2021.11.18.1010
+// @version     1.2021.11.18.1012
 // @grant       none
 // @run-at 	document-end
 // @copyright   2015, cameroncondry
